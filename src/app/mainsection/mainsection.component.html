@@ -1,0 +1,55 @@
+<h1 class="text-center text-primary">Random User On Refresh</h1>
+<div style="background-color: {{colorNum}};" class=" container d-flex justify-content-center align-items-center" style="width: 60%; ">
+    <div class="col-lg-6 p-4 d-flex flex-column">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <img class="border border-dark shadow-lg rounded-circle" src="{{userdet.image}}" alt=""width="150px" height="150px">
+            <h2>{{userdet.firstName}} {{userdet.lastName}}</h2>
+            <p>{{userdet.gender}}</p>
+        </div>
+        <div class="d-flex">
+                <div class="d-flex flex-column">
+                    <h3>Birth Date</h3>
+                    <p>{{userdet.birthDate}}</p>
+                </div>
+                <div class="d-flex flex-column ms-auto">
+                    <h3>Age</h3>
+                    <p>{{userdet.age}}</p>
+                </div>
+        </div>
+        <div class="d-flex">
+            <div class="d-flex flex-column">
+                <h3>Weight</h3>
+                <p>{{userdet.weight}}</p>
+            </div>
+            <div class="d-flex flex-column ms-auto">
+                <h3>Height</h3>
+                <p>{{userdet.height}}</p>
+            </div>
+        </div>
+        <input (click)="details()" style="background-color: #000000;" class="btn fs-3 text-light" type="button" value="REFRESH">
+    </div>
+    <div class="col-lg-6 p-4 content-right d-flex flex-column">
+        <div class="d-flex flex-column">
+            <div class="d-flex flex-column">
+                <h3>Home Address</h3>
+                <p>{{userdet.address.address}}</p>
+            </div>
+            <div class="d-flex flex-column">
+                <h3>Mobile Phone</h3>
+                <p>{{userdet.phone}}</p>
+            </div>
+            <div class="d-flex flex-column">
+                <h3>Company</h3>
+                <p>{{userdet.company.name}}</p>
+            </div>
+            <div class="d-flex flex-column">
+                <h3>Job Title</h3>
+                <p>{{userdet.company.title}}</p>
+            </div>
+            <div class="d-flex flex-column">
+                <h3>Email</h3>
+                <p>{{userdet.email}}</p>
+            </div>
+        </div>
+    </div>
+</div>
